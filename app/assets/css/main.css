@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root,
+[data-theme='dark'] {
+  --term-bg: #0a0e0c;
+  --term-panel: #0f1512;
+  --term-thumb: #151b16;
+  --term-border: #1f2b26;
+  --term-green: #33d17a;
+  --term-green-hover: #4ade80;
+  --term-oncolor: #05130a;
+  --term-amber: #f2b705;
+  --term-text: #c9d1cf;
+  --term-dim: #6b7d76;
+  --term-grid-rgb: 51, 209, 122;
+}
+
+[data-theme='light'] {
+  --term-bg: #f5f4ef;
+  --term-panel: #ffffff;
+  --term-thumb: #eceae1;
+  --term-border: #dcd9cd;
+  --term-green: #1f8a4c;
+  --term-green-hover: #24a15a;
+  --term-oncolor: #ffffff;
+  --term-amber: #a5760a;
+  --term-text: #1c1f1d;
+  --term-dim: #5b6560;
+  --term-grid-rgb: 31, 138, 76;
+}
+
+* {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--term-bg);
+  background-image:
+    linear-gradient(rgba(var(--term-grid-rgb), 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--term-grid-rgb), 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  transition: background-color 0.2s ease;
+}
+
+::selection {
+  background: var(--term-green);
+  color: var(--term-oncolor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--term-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--term-border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--term-dim);
+}
+
+.cursor-blink::after {
+  content: '_';
+  color: var(--term-green);
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.prompt::before {
+  content: '$ ';
+  color: var(--term-green);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink::after {
+    animation: none;
+  }
+}
+
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 50;
+  background: var(--term-green);
+  color: var(--term-oncolor);
+  padding: 10px 16px;
+  font-size: 13px;
+  border-radius: 0 0 6px 0;
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
+
+#theme-toggle {
+  border: 1px solid var(--term-border);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--term-dim);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+#theme-toggle:hover {
+  color: var(--term-green);
+  border-color: var(--term-dim);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--term-green);
+  outline-offset: 2px;
+}
+
+/* scroll-reveal (see app/plugins/reveal.client.ts) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print,
+  .cursor-blink {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
