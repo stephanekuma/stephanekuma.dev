@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withDefaults(
+const props = withDefaults(
   defineProps<{
     title: string
     description?: string
@@ -8,10 +8,14 @@ withDefaults(
   }>(),
   {
     description: '',
-    buttonLabel: 'me contacter',
+    buttonLabel: undefined,
     buttonTo: '/contact'
   }
 )
+
+const localePath = useLocalePath()
+const { t } = useI18n()
+const label = computed(() => props.buttonLabel ?? t('common.contactMe'))
 </script>
 
 <template>
@@ -21,11 +25,11 @@ withDefaults(
       <h2 class="text-2xl sm:text-3xl font-bold mb-4">{{ title }}</h2>
       <p v-if="description" class="text-[var(--term-dim)] max-w-md mx-auto mb-8">{{ description }}</p>
       <NuxtLink
-        :to="buttonTo"
+        :to="localePath(buttonTo)"
         class="inline-block cursor-pointer bg-[var(--term-green)] text-[var(--term-oncolor)] font-semibold text-sm px-6 py-3 rounded transition-all duration-200 hover:bg-[var(--term-green-hover)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
         :class="description ? '' : 'mt-4'"
       >
-        {{ buttonLabel }}
+        {{ label }}
       </NuxtLink>
     </div>
   </section>

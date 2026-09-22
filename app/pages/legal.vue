@@ -1,49 +1,46 @@
 <script setup lang="ts">
 import { siteMeta } from '~/data/site'
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'mentions légales — stephane.dev'
+  title: () => t('legal.seo.title')
 })
 </script>
 
 <template>
   <section class="max-w-2xl mx-auto px-6 py-16">
-    <p class="text-[var(--term-green)] text-sm mb-3 prompt">cat mentions-legales.md</p>
-    <h1 class="text-3xl font-bold mb-10">Mentions légales & confidentialité</h1>
+    <p class="text-[var(--term-green)] text-sm mb-3 prompt">{{ t('legal.prompt') }}</p>
+    <h1 class="text-3xl font-bold mb-10">{{ t('legal.heading') }}</h1>
 
     <div class="space-y-8 text-sm text-[var(--term-dim)] leading-relaxed">
       <div>
-        <h2 class="text-[var(--term-text)] font-semibold mb-2">Éditeur du site</h2>
-        <p>{{ siteMeta.name }} — {{ siteMeta.location }}.<br />Contact : {{ siteMeta.email }}</p>
+        <h2 class="text-[var(--term-text)] font-semibold mb-2">{{ t('legal.editorTitle') }}</h2>
+        <p>{{ siteMeta.name }} — {{ siteMeta.location }}.<br />{{ t('legal.contactLabel') }} : {{ siteMeta.email }}</p>
       </div>
 
       <div>
-        <h2 class="text-[var(--term-text)] font-semibold mb-2">Hébergement</h2>
-        <p>À compléter avec les informations de ton hébergeur une fois le site déployé (nom, adresse, contact).</p>
+        <h2 class="text-[var(--term-text)] font-semibold mb-2">{{ t('legal.hostingTitle') }}</h2>
+        <p>{{ t('legal.hostingText') }}</p>
       </div>
 
       <div>
-        <h2 class="text-[var(--term-text)] font-semibold mb-2">Données collectées</h2>
-        <p>
-          Le formulaire de contact de ce site recueille votre nom, votre email et le contenu de votre message,
-          dans le seul but de répondre à votre demande. Ces données ne sont ni revendues ni transmises à des tiers.
-        </p>
+        <h2 class="text-[var(--term-text)] font-semibold mb-2">{{ t('legal.dataTitle') }}</h2>
+        <p>{{ t('legal.dataText') }}</p>
       </div>
 
       <div>
-        <h2 class="text-[var(--term-text)] font-semibold mb-2">Cookies</h2>
-        <p>Ce site n'utilise pas de cookies de suivi. À mettre à jour si un outil d'analyse d'audience est ajouté par la suite.</p>
+        <h2 class="text-[var(--term-text)] font-semibold mb-2">{{ t('legal.cookiesTitle') }}</h2>
+        <p>{{ t('legal.cookiesText') }}</p>
       </div>
 
       <div>
-        <h2 class="text-[var(--term-text)] font-semibold mb-2">Vos droits</h2>
-        <p>Vous pouvez demander l'accès, la correction ou la suppression de vos données en écrivant à {{ siteMeta.email }}.</p>
+        <h2 class="text-[var(--term-text)] font-semibold mb-2">{{ t('legal.rightsTitle') }}</h2>
+        <p>{{ t('legal.rightsText', { email: siteMeta.email }) }}</p>
       </div>
 
       <p class="text-xs text-[var(--term-dim)] pt-4 border-t border-[var(--term-border)]">
-        Ce texte est un modèle de départ — à faire relire par un professionnel du droit avant mise en ligne
-        officielle, notamment si le site collecte des données de résidents européens (RGPD) ou traite des
-        paiements.
+        {{ t('legal.disclaimer') }}
       </p>
     </div>
   </section>

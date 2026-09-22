@@ -2,34 +2,22 @@
 import type { NuxtError } from '#app'
 
 const props = defineProps<{ error: NuxtError }>()
+const { t } = useI18n()
+const localePath = useLocalePath()
 
-const messages: Record<number, { command: string; title: string; text: string }> = {
-  403: {
-    command: 'cat ./acces-refuse',
-    title: '403',
-    text: "bash: permission denied — vous n'avez pas accès à cette page."
-  },
-  404: {
-    command: 'cat ./page-demandee',
-    title: '404',
-    text: "bash: page introuvable — elle a peut-être été déplacée ou n'a jamais existé."
-  },
-  500: {
-    command: 'cat ./erreur-serveur',
-    title: '500',
-    text: "bash: une erreur inattendue est survenue côté serveur. Réessayez dans un instant."
-  },
-  503: {
-    command: 'cat ./service-indisponible',
-    title: '503',
-    text: 'bash: service temporairement indisponible — maintenance en cours ou charge trop élevée.'
+const knownCodes = [403, 404, 500, 503]
+
+const info = computed(() => {
+  const code = knownCodes.includes(props.error.statusCode) ? props.error.statusCode : 500
+  return {
+    command: t(`error.${code}.command`),
+    title: t(`error.${code}.title`),
+    text: t(`error.${code}.text`)
   }
-}
-
-const info = computed(() => messages[props.error.statusCode] ?? messages[500])
+})
 
 function goHome() {
-  clearError({ redirect: '/' })
+  clearError({ redirect: localePath('/') })
 }
 </script>
 
@@ -46,7 +34,7 @@ function goHome() {
           class="inline-block cursor-pointer bg-[var(--term-green)] text-[var(--term-oncolor)] font-semibold text-sm px-6 py-3 rounded transition-all duration-200 hover:bg-[var(--term-green-hover)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
           @click="goHome"
         >
-          retour à l'accueil
+          {{ t('common.backToHome') }}
         </button>
       </section>
     </main>

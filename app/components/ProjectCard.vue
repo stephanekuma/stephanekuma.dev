@@ -4,13 +4,16 @@ import type { Project } from '~~/server/utils/content'
 withDefaults(defineProps<{ project: Project; variant?: 'featured' | 'full' }>(), {
   variant: 'full'
 })
+
+const localePath = useLocalePath()
+const { t } = useI18n()
 </script>
 
 <template>
   <NuxtLink
     v-reveal
-    :to="`/projects/${project.slug}`"
-    class="group block border border-[var(--term-border)] rounded-lg bg-[var(--term-panel)] transition-all duration-200 hover:border-[var(--term-dim)] hover:-translate-y-1 hover:shadow-lg"
+    :to="localePath(`/projects/${project.slug}`)"
+    class="group block cursor-pointer border border-[var(--term-border)] rounded-lg bg-[var(--term-panel)] transition-all duration-200 hover:border-[var(--term-dim)] hover:-translate-y-1 hover:shadow-lg"
     :class="variant === 'featured' ? 'p-6' : 'p-7'"
   >
     <div class="flex items-center gap-2 text-xs text-[var(--term-green)] mb-3">
@@ -31,9 +34,12 @@ withDefaults(defineProps<{ project: Project; variant?: 'featured' | 'full' }>(),
         <TagBadge v-for="tag in project.stack" :key="tag">{{ tag }}</TagBadge>
       </div>
       <div class="flex gap-6 text-xs text-[var(--term-dim)] border-t border-[var(--term-border)] pt-4">
-        <span><strong class="text-[var(--term-text)] font-medium">rôle</strong> — {{ project.role }}</span>
-        <span><strong class="text-[var(--term-text)] font-medium">statut</strong> — {{ project.status }}</span>
-        <span class="text-[var(--term-green)] ml-auto inline-flex items-center gap-1 transition-transform duration-200 group-hover:translate-x-1">voir le détail →</span>
+        <span><strong class="text-[var(--term-text)] font-medium">{{ t('projects.detail.role') }}</strong> — {{ project.role }}</span>
+        <span><strong class="text-[var(--term-text)] font-medium">{{ t('projects.detail.status') }}</strong> — {{ project.status }}</span>
+        <span class="text-[var(--term-green)] ml-auto inline-flex items-center gap-1 transition-transform duration-200 group-hover:translate-x-1">
+          {{ t('projects.detail.viewDetail') }}
+          <Icon name="lucide:arrow-right" size="14" />
+        </span>
       </div>
     </template>
   </NuxtLink>

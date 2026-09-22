@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { theme, sync, toggle } = useTheme()
+const { t } = useI18n()
 
 onMounted(sync)
 </script>
@@ -9,9 +10,9 @@ onMounted(sync)
     id="theme-toggle"
     type="button"
     class="cursor-pointer transition-transform duration-200 hover:scale-110 active:scale-90"
-    :aria-label="theme === 'dark' ? 'passer en thème clair' : 'passer en thème sombre'"
+    :aria-label="theme === 'dark' ? t('common.switchToLight') : t('common.switchToDark')"
     @click="toggle"
   >
-    {{ theme === 'dark' ? '☾' : '☀' }}
+    <Icon :name="theme === 'dark' ? 'lucide:moon' : 'lucide:sun'" size="18" />
   </button>
 </template>

@@ -4,13 +4,15 @@ import type { BlogPostSummary } from '~~/server/utils/content'
 withDefaults(defineProps<{ post: BlogPostSummary; variant?: 'teaser' | 'full' }>(), {
   variant: 'full'
 })
+
+const localePath = useLocalePath()
 </script>
 
 <template>
   <NuxtLink
     v-reveal
-    :to="`/blog/${post.slug}`"
-    class="block border border-[var(--term-border)] rounded-lg bg-[var(--term-panel)] transition-all duration-200 hover:border-[var(--term-dim)] hover:-translate-y-1 hover:shadow-lg"
+    :to="localePath(`/blog/${post.slug}`)"
+    class="block cursor-pointer border border-[var(--term-border)] rounded-lg bg-[var(--term-panel)] transition-all duration-200 hover:border-[var(--term-dim)] hover:-translate-y-1 hover:shadow-lg"
     :class="variant === 'teaser' ? 'p-5' : 'p-6'"
   >
     <p class="text-xs text-[var(--term-dim)]" :class="variant === 'teaser' ? 'mb-1' : 'mb-2'">
