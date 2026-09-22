@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "siteTitle": "stephane.dev",
+    "homeTitle": "stephane{'@'}lome:~$",
+    "homeDescription": "Solution Architect & Full Stack Web & Mobile developer based in Lomé, Togo. Background, projects and technical blog."
+  },
+  "nav": {
+    "ariaLabel": "main navigation",
+    "services": "./services",
+    "parcours": "./journey",
+    "projects": "./projects",
+    "blog": "./blog",
+    "contact": "./contact"
+  },
+  "common": {
+    "skipToContent": "skip to main content",
+    "menu": "menu",
+    "close": "close",
+    "contactMe": "contact me",
+    "downloadCv": "download CV",
+    "backToHome": "back to home",
+    "language": "language",
+    "switchToLight": "switch to light theme",
+    "switchToDark": "switch to dark theme",
+    "jobTitle": "Solution Architect"
+  },
+  "footer": {
+    "now": "./now",
+    "legal": "legal notice"
+  },
+  "home": {
+    "badge": "open to missions and collaborations",
+    "intro": "Solution Architect at Agence Togo Digital, Full Stack Web & Mobile developer for 6+ years. Laravel, Vue.js and Flutter day to day — NestJS, Next.js and Django on occasion. Based in Lomé, I also build my own projects in my free time.",
+    "viewProjects": "view my projects",
+    "contactMe": "contact me",
+    "downloadCv": "download CV",
+    "skillsPrompt": "cat skills.json",
+    "seeFullJourney": "full journey",
+    "featuredPrompt": "ls ./projects --featured",
+    "seeAllProjects": "all projects",
+    "blogPrompt": "tail -n 3 blog.log",
+    "seeAllPosts": "all posts",
+    "trustedPrompt": "clients & teams I've worked with",
+    "githubPrompt": "curl api.github.com/users/StephaneKuma",
+    "testimonialsPrompt": "cat testimonials.json",
+    "testimonialsNote": "sample quotes — to be replaced with real client or colleague feedback",
+    "ctaTitle": "Got a project in mind?",
+    "ctaDescription": "Let's talk about your idea, whether it's a revamp, an architecture audit or a project from scratch.",
+    "ctaButton": "start a project",
+    "profileAlt": "Photo of Kossi Stéphane Kuma",
+    "quickContact": {
+      "title": "other ways to reach me",
+      "email": "email",
+      "phone": "phone",
+      "whatsapp": "WhatsApp",
+      "book": "book a slot"
+    }
+  },
+  "github": {
+    "publicRepos": "public repos",
+    "followers": "followers",
+    "viewProfile": "view profile"
+  },
+  "parcours": {
+    "prompt": "cat journey.md",
+    "intro1": "Solution Architect at Agence Togo Digital since February 2026, Full Stack Web & Mobile developer for 6+ years — designing, architecting and deploying web and mobile applications at scale.",
+    "intro2": "Core expertise in Laravel, Vue.js and Flutter, with additional experience in NestJS, Next.js and Django.",
+    "downloadCv": "download my CV (PDF)",
+    "print": "print this page",
+    "timelinePrompt": "git log --graph --stat",
+    "skillsPrompt": "cat skills.json",
+    "expertiseLabel": "core expertise",
+    "secondaryLabel": "also familiar with",
+    "educationPrompt": "cat education.md",
+    "offlinePrompt": "cat offline.txt",
+    "offlineText": "Guitar and fitness — my two ways to unwind when I'm not in front of a terminal.",
+    "ctaTitle": "Want to work together?",
+    "ctaDescription": "Let's talk about your project, mission or idea.",
+    "seo": {
+      "title": "journey — stephane.dev",
+      "description": "Professional background of Kossi Stéphane Kuma, Solution Architect and Full Stack Web & Mobile developer."
+    }
+  },
+  "services": {
+    "prompt": "ls ./services",
+    "heading": "What I can do for you",
+    "intro": "From pure development to architecture guidance, depending on where you are in your project.",
+    "processLink": "see how I work, step by step",
+    "ctaTitle": "Got a specific need?",
+    "ctaDescription": "Let's talk about it, no strings attached.",
+    "ctaButton": "request a quote",
+    "seo": {
+      "title": "services — stephane.dev",
+      "description": "Services offered by Kossi Stéphane Kuma: backend, frontend and mobile development, and architecture audits."
+    }
+  },
+  "process": {
+    "breadcrumb": "breadcrumb",
+    "breadcrumbServices": "services",
+    "breadcrumbCurrent": "process",
+    "prompt": "cat process.md",
+    "heading": "How I work",
+    "intro": "A simple method, designed to avoid bad surprises on either side.",
+    "ctaTitle": "Ready to start?",
+    "ctaButton": "contact me",
+    "seo": {
+      "title": "process — stephane.dev",
+      "description": "How Kossi Stéphane Kuma runs a project, from scoping to delivery."
+    }
+  },
+  "projects": {
+    "index": {
+      "prompt": "ls -la ./projects",
+      "heading": "Personal projects",
+      "intro": "What I build outside of work — sometimes shipped, sometimes still in progress.",
+      "more": "more projects will show up here over time.",
+      "ctaTitle": "Want to collaborate on a project?",
+      "ctaDescription": "Whether it's a mission, an audit or an idea to bring to life, get in touch.",
+      "ctaButton": "start a project",
+      "seo": {
+        "title": "projects — stephane.dev",
+        "description": "Personal projects by Kossi Stéphane Kuma: Symplicia and other side projects."
+      }
+    },
+    "detail": {
+      "breadcrumb": "breadcrumb",
+      "breadcrumbHome": "home",
+      "breadcrumbProjects": "projects",
+      "backToProjects": "back to projects",
+      "viewDetail": "view detail",
+      "sourceCode": "source code",
+      "downloadCv": "download CV",
+      "challenge": "challenge",
+      "solution": "solution",
+      "result": "result",
+      "screenshotsPrompt": "ls ./screenshots",
+      "screenshotHome": "screenshot — home",
+      "screenshotDashboard": "screenshot — dashboard",
+      "screenshotListing": "screenshot — listing",
+      "screenshotsNote": "Placeholders — replace with your real screenshots.",
+      "descriptionPrompt": "cat description.md",
+      "stackPrompt": "cat stack.json",
+      "role": "role",
+      "status": "status",
+      "zone": "zone",
+      "ctaTitle": "Got a similar project in mind?",
+      "ctaDescription": "Let's talk about your architecture or development needs.",
+      "ctaButton": "start a project",
+      "notFound": "Project not found"
+    }
+  },
+  "blog": {
+    "index": {
+      "prompt": "tail -f blog.log",
+      "heading": "Blog",
+      "intro": "Technical notes on software architecture and ongoing projects. Sample posts to be replaced with your real writing.",
+      "rss": "subscribe to the RSS feed",
+      "searchPlaceholder": "search an article...",
+      "categoryLabel": "category",
+      "reset": "reset",
+      "noResults": "No article matches your search.",
+      "categoriesPrompt": "ls ./categories",
+      "allPosts": "all articles",
+      "authorPrompt": "cat author.md",
+      "authorRole": "Solution Architect · full stack developer",
+      "contactMe": "contact me",
+      "ctaTitle": "Want me to write about something specific?",
+      "ctaDescription": "Or simply have a project for me — write to me.",
+      "seo": {
+        "title": "blog — stephane.dev",
+        "description": "Technical notes on software architecture, event sourcing and web & mobile development."
+      }
+    },
+    "detail": {
+      "breadcrumb": "breadcrumb",
+      "breadcrumbHome": "home",
+      "breadcrumbBlog": "blog",
+      "backToBlog": "back to blog",
+      "coverPlaceholder": "cover image — to be replaced",
+      "comingSoon": "Full article coming soon.",
+      "codeExtract": "code excerpt",
+      "share": "share:",
+      "copyLink": "copy link",
+      "linkCopied": "link copied!",
+      "similarPrompt": "ls ./related-articles",
+      "allArticles": "all articles",
+      "questionContact": "a question? contact me",
+      "commentsPrompt": "./comments.sh",
+      "commentsNote": "Comments powered by Giscus (built on GitHub Discussions) — connect your own repo via {link} to get the repo-id and category-id to paste above.",
+      "notFound": "Article not found"
+    }
+  },
+  "contact": {
+    "prompt": "mail --compose",
+    "heading": "Let's talk about your project",
+    "intro": "A mission, an architecture audit, or just an idea to validate — write to me, I reply within 48h.",
+    "calendly": "book a slot directly",
+    "form": {
+      "name": "name",
+      "namePlaceholder": "your name",
+      "email": "email",
+      "emailPlaceholder": "you{'@'}example.com",
+      "type": "request type",
+      "typeOptions": {
+        "newProject": "new project",
+        "audit": "architecture audit",
+        "partnership": "collaboration / partnership",
+        "other": "other"
+      },
+      "message": "message",
+      "messagePlaceholder": "describe your project in a few lines",
+      "submit": "send message",
+      "submitting": "sending...",
+      "requiredError": "Please fill in all required fields.",
+      "genericError": "Something went wrong, please try again in a moment.",
+      "successMessage": "Message sent — I'll reply within 48h."
+    },
+    "infoPrompt": "cat contact.json",
+    "labels": {
+      "email": "email",
+      "phone": "phone",
+      "location": "location",
+      "delay": "response time",
+      "delayValue": "reply within 48h"
+    },
+    "languagesPrompt": "cat languages.json",
+    "socialPrompt": "ls ./social",
+    "seo": {
+      "title": "contact — stephane.dev",
+      "description": "Get in touch with Kossi Stéphane Kuma for a project, a mission or an architecture audit."
+    }
+  },
+  "legal": {
+    "prompt": "cat legal-notice.md",
+    "heading": "Legal notice & privacy",
+    "editorTitle": "Site owner",
+    "contactLabel": "Contact",
+    "hostingTitle": "Hosting",
+    "hostingText": "To be completed with your host's details once the site is deployed (name, address, contact).",
+    "dataTitle": "Data collected",
+    "dataText": "This site's contact form collects your name, email and message content, solely to respond to your request. This data is never sold or shared with third parties.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "This site does not use tracking cookies. To be updated if an analytics tool is added later.",
+    "rightsTitle": "Your rights",
+    "rightsText": "You can request access, correction or deletion of your data by writing to {email}.",
+    "disclaimer": "This text is a starting template — have it reviewed by a legal professional before going live officially, especially if the site collects data from EU residents (GDPR) or processes payments.",
+    "seo": {
+      "title": "legal notice — stephane.dev"
+    }
+  },
+  "now": {
+    "prompt": "cat now.md",
+    "heading": "Now",
+    "lastUpdate": "last updated: September 2026",
+    "liveStatus": "live status",
+    "localTime": "it's {time} in Lomé, Togo",
+    "introBefore": "A look at what's taking up my time right now, updated from time to time. Inspired by the",
+    "introLink": "now page movement",
+    "seo": {
+      "title": "now — stephane.dev",
+      "description": "What Kossi Stéphane Kuma is working on right now."
+    }
+  },
+  "terminal": {
+    "hint": "psst — try Ctrl+K",
+    "title": "terminal.exe",
+    "placeholder": "type 'help' to get started...",
+    "welcome": "Welcome. Type 'help' for the command list, Esc to close.",
+    "notFound": "command not found: {cmd} — type 'help' for the command list.",
+    "help": {
+      "title": "available commands:",
+      "help": "show this command list",
+      "whoami": "about me",
+      "ls": "list the site's pages",
+      "cd": "navigate to a page, e.g. cd blog",
+      "cat": "print a file, e.g. cat skills.json",
+      "open": "open a profile, e.g. open github",
+      "theme": "switch theme, e.g. theme light",
+      "lang": "switch language, e.g. lang fr",
+      "date": "show the current date and time",
+      "echo": "echo your text back",
+      "clear": "clear the terminal",
+      "exit": "close the terminal"
+    },
+    "whoamiBio": "Kossi Stéphane Kuma — Solution Architect & Full Stack Web & Mobile developer, based in Lomé, Togo. 6+ years of experience, Laravel/Vue.js/Flutter day to day.",
+    "cdUsage": "usage: cd [page] — try 'cd blog' or 'cd ..' for home",
+    "cdNotFound": "page not found: {page} — type 'ls' for the page list",
+    "cdNavigating": "→ heading to {page}...",
+    "catUsage": "usage: cat [file] — try 'cat skills.json' or 'cat contact.json'",
+    "catNotFound": "file not found: {file}",
+    "catSkills": "skills: {skills}",
+    "catContact": "email: {email} · phone: {phone} · location: {location}",
+    "catCv": "downloading cv-stephane-kuma.pdf...",
+    "openUsage": "usage: open [network] — try 'open github' or 'open linkedin'",
+    "openNotFound": "network not found: {network}",
+    "openOpening": "opening {network}...",
+    "themeUsage": "usage: theme <dark|light>",
+    "themeSet": "theme set to {theme}",
+    "langUsage": "usage: lang <fr|en>",
+    "langSet": "language set to {lang}",
+    "coffee": "☕ brewing coffee... error: no coffee machine found on this server.",
+    "sudoDenied": "Permission denied: this is a static site, not a real shell. Nice try though.",
+    "exiting": "closing terminal..."
+  },
+  "onboarding": {
+    "title": "hidden easter eggs",
+    "text": "Try Ctrl+K to open a mini terminal, the Konami code (↑↑↓↓←→←→BA), or 'g' then a letter for keyboard navigation.",
+    "dismiss": "got it",
+    "showShortcuts": "view shortcuts"
+  },
+  "shortcuts": {
+    "hint": "press ? for keyboard shortcuts",
+    "title": "keyboard shortcuts",
+    "commandPalette": "open the terminal",
+    "navigation": "navigation (press g then a key)",
+    "home": "home",
+    "services": "services",
+    "journey": "journey",
+    "projects": "projects",
+    "blog": "blog",
+    "contact": "contact",
+    "now": "now",
+    "help": "toggle this help",
+    "closeHint": "Esc to close"
+  },
+  "error": {
+    "403": {
+      "command": "cat ./access-denied",
+      "title": "403",
+      "text": "bash: permission denied — you don't have access to this page."
+    },
+    "404": {
+      "command": "cat ./requested-page",
+      "title": "404",
+      "text": "bash: page not found — it may have been moved or never existed."
+    },
+    "500": {
+      "command": "cat ./server-error",
+      "title": "500",
+      "text": "bash: an unexpected error occurred server-side. Please try again shortly."
+    },
+    "503": {
+      "command": "cat ./service-unavailable",
+      "title": "503",
+      "text": "bash: service temporarily unavailable — maintenance in progress or load too high."
+    }
+  }
+}
