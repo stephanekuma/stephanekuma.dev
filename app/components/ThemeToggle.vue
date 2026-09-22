@@ -1,8 +1,6 @@
 <script setup lang="ts">
-const { theme, sync, toggle } = useTheme()
+const { theme, toggle } = useTheme()
 const { t } = useI18n()
-
-onMounted(sync)
 </script>
 
 <template>
