@@ -10,7 +10,7 @@ export const siteMeta = {
 
 export const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/StephaneKuma' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/stéphane-kossi-kuma' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/stephane-kossi-kuma' },
   { label: 'Email', href: `mailto:${siteMeta.email}` }
 ]
 
